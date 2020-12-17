@@ -11,6 +11,9 @@ class FoodCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(right: 18.0),
       child: Card(
+        elevation: 4,
+        color: Colors.redAccent,
+        shadowColor: Colors.yellow,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0, ),
           child: Row(

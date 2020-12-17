@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Puri Fast Food",
       theme: ThemeData(
-        primaryColor: Colors.blueAccent,
+        primaryColor: Colors.lightBlueAccent,
 
       ),
-      home: HomePage(),
+      home: HomePage(
+      ),
     );
   }
 }
