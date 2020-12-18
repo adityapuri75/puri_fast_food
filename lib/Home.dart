@@ -3,15 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:puri_fast_food/widgets/Home_Top_Info.dart';
 import 'package:puri_fast_food/widgets/bought_food.dart';
 import 'package:puri_fast_food/widgets/food_catagory..dart';
+import 'models/food_model.dart';
 import 'widgets/text_field.dart';
 import 'widgets/bought_food.dart';
 
+import 'data/food_data.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
+  List<Food> _foods = foods;
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -33,15 +37,27 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(height: 15,),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Container(
-                child: BoughtFoods(),
-              ),
-            )
+            Column(
+              children: _foods.map(boughtfooditems).toList()
+            ),
           ],
         ),
       ),
     );
   }
+  Widget boughtfooditems(Food food){
+    return Container(
+      margin: EdgeInsets.only(bottom: 20),
+      child: BoughtFoods(
+        id: food.id,
+        price: food.price,
+        catagory: food.catagory,
+        discount: food.discount,
+        imagePath: food.imagePath,
+        name: food.name,
+        ratings: food.ratings,
+      ),
+    );
+
+}
 }

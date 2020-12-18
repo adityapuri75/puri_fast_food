@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puri_fast_food/screens/main_screen.dart';
 
 import 'Home.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.lightBlueAccent,
 
       ),
-      home: HomePage(
+      home: MainScreen(
       ),
     );
   }
