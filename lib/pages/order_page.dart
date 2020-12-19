@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:puri_fast_food/pages/signin_page.dart';
 
 //my widgets
 import '../widgets/order_card.dart';
@@ -75,16 +76,21 @@ class _OrderPageState extends State<OrderPage> {
             ],
           ),
           SizedBox(height: 20,),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 50,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(30),
+          GestureDetector(
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(35),
 
-            ),
-            child: Center(
-              child: Text("Proceed To Checkout",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),
+              ),
+              child: Center(
+                child: Text("Proceed To Checkout",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),
+              ),
             ),
           ),
 
