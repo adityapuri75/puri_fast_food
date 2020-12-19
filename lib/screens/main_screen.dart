@@ -34,6 +34,7 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+
       bottomNavigationBar: BottomNavigationBar(
         onTap: (int index){
           setState(() {
@@ -64,6 +65,12 @@ class _MainScreenState extends State<MainScreen> {
         ],
       ),
       body: currentPage,
+      appBar: currentTabIndex==1?AppBar(
+        title: Text("Food Cart"),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ):null
     );
   }
 }
