@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puri_fast_food/pages/signup_page.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -91,7 +92,11 @@ class _SignInPageState extends State<SignInPage> {
               children: <Widget>[
                 Text("Don't have an account",style: TextStyle(color: Color(0xffbdc2cb),fontWeight: FontWeight.bold,fontSize: 18),),
                 SizedBox(width: 10,),
-                Text("Sign Up",style: TextStyle(color: Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 18),),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(BuildContext Context)=> SignUpPage() ));
+                  },
+                    child: Text("Sign Up",style: TextStyle(color: Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 18),)),
               ],
             ),
 

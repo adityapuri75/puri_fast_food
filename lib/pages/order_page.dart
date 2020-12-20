@@ -44,7 +44,7 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Cart Total", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.grey)),
-              Text("23.0",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
+              Text("\u20b9 23.0",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
 
             ],
           ),
@@ -53,7 +53,7 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Discount", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.grey)),
-              Text("3.0",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
+              Text("\u20b9 3.0",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
 
             ],
           ),
@@ -62,7 +62,7 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Tax", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.grey)),
-              Text("0.45",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
+              Text("\u20b9 0.45",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
 
             ],
           ),
@@ -71,7 +71,7 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("Sub Total", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.grey)),
-              Text("26.45",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
+              Text("\u20b9 26.45",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black),),
 
             ],
           ),
