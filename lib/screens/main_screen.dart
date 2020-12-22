@@ -3,9 +3,14 @@ import 'package:puri_fast_food/Home.dart';
 import 'package:puri_fast_food/pages/favorite_page.dart';
 import 'package:puri_fast_food/pages/order_page.dart';
 import 'package:puri_fast_food/pages/profile_page.dart';
+import 'package:puri_fast_food/scoped-model/food_model.dart';
 //pages
 import '../pages/home_page.dart';
 class MainScreen extends StatefulWidget {
+  final FoodModel foodModel;
+
+  MainScreen({this.foodModel});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -20,9 +25,11 @@ class _MainScreenState extends State<MainScreen> {
   ProfilePage profilePage;
   @override
   void initState() {
-    // TODO: implement initState
+    //fetch meathod on food
+    // widget.foodModel.fetchFoods();
+
     super.initState();
-    homePage = HomePage();
+    homePage = HomePage(widget.foodModel);
     orderPage= OrderPage();
     favoritePage= FavoritePage();
     profilePage= ProfilePage();

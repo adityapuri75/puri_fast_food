@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:puri_fast_food/scoped-model/food_model.dart';
 import 'package:puri_fast_food/widgets/Home_Top_Info.dart';
 import 'package:puri_fast_food/widgets/bought_food.dart';
 import 'package:puri_fast_food/widgets/food_catagory..dart';
@@ -7,15 +8,20 @@ import 'models/food_model.dart';
 import 'widgets/text_field.dart';
 import 'widgets/bought_food.dart';
 
-import 'data/food_data.dart';
 class HomePage extends StatefulWidget {
+  final FoodModel foodModel;
+
+  HomePage(this.foodModel);
   @override
   _HomePageState createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
-  List<Food> _foods = foods;
   @override
-
+  void initState(){
+    widget.foodModel.fetchFoods();
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -38,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 15,),
             Column(
-              children: _foods.map(boughtfooditems).toList()
+              children: widget.foodModel.foods.map(boughtfooditems).toList(),
             ),
           ],
         ),
