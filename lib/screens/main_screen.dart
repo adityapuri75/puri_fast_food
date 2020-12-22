@@ -5,7 +5,6 @@ import 'package:puri_fast_food/pages/order_page.dart';
 import 'package:puri_fast_food/pages/profile_page.dart';
 import 'package:puri_fast_food/scoped-model/food_model.dart';
 //pages
-import '../pages/home_page.dart';
 class MainScreen extends StatefulWidget {
   final FoodModel foodModel;
 
